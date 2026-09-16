@@ -405,6 +405,49 @@
       margin-top: 2px;
     }
 
+    /* QR CODE DISCRET */
+    .qr-block {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      border-radius: 6px;
+      padding: 6px 9px;
+      margin-top: 6px;
+    }
+
+    .qr-link {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .qr-image {
+      width: 44px;
+      height: 44px;
+      flex-shrink: 0;
+    }
+
+    .qr-info {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.25;
+    }
+
+    .qr-badge {
+      font-size: 10px;
+      font-weight: 800;
+      color: var(--navy-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.4px;
+    }
+
+    .qr-desc {
+      font-size: 9.5px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
     /* Centres d'intérêt */
     .interests-tags {
       display: flex;
@@ -682,6 +725,10 @@
       .interest-tag {
         font-size: 12px;
         padding: 4px 12px;
+      }
+
+      .qr-block {
+        display: none !important;
       }
     }
 
@@ -966,6 +1013,17 @@
               <span class="interest-tag">Gymnastique & Yoga</span>
               <span class="interest-tag">Lecture</span>
             </div>
+          </div>
+
+          <!-- QR Code Version Mobile Interactive -->
+          <div class="qr-block">
+            <a href="https://almoha73.github.io/CVMonique/" target="_blank" class="qr-link">
+              <img src="qrcode.svg" alt="QR Code CV interactif" class="qr-image">
+              <div class="qr-info">
+                <span class="qr-badge">Version en ligne</span>
+                <span class="qr-desc">Flasher pour ouvrir sur smartphone</span>
+              </div>
+            </a>
           </div>
 
         </aside>
