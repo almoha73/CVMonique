@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lettre de motivation - Monique CHAZALVIEL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy-dark: #0f2b48;
+      --navy-mid: #1a426e;
+      --blue-accent: #2563eb;
+      --text-dark: #1e293b;
+      --text-muted: #475569;
+      --line: #cbd5e1;
+      --font-title: 'Outfit', sans-serif;
+      --font-body: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text-dark);
+      background: #f1f5f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 30px 15px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .toolbar {
+      width: 100%;
+      max-width: 800px;
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .btn-print {
+      background: var(--navy-dark);
+      color: #ffffff;
+      padding: 9px 18px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 13px;
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+
+    .btn-print:hover {
+      background: var(--navy-mid);
+    }
+
+    .letter-card {
+      width: 100%;
+      max-width: 800px;
+      background: #ffffff;
+      padding: 55px 60px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .header-block {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 35px;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .sender-info h1 {
+      font-family: var(--font-title);
+      font-size: 20px;
+      color: var(--navy-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .sender-info p, .recipient-info p {
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .recipient-info {
+      text-align: right;
+      padding-top: 15px;
+    }
+
+    .recipient-info strong {
+      color: var(--navy-dark);
+    }
+
+    .date-line {
+      text-align: right;
+      margin-bottom: 30px;
+      font-size: 13px;
+      color: var(--text-muted);
+    }
+
+    .object-line {
+      background: #eff6ff;
+      border-left: 4px solid var(--blue-accent);
+      padding: 12px 18px;
+      margin-bottom: 30px;
+      font-size: 13.5px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .object-line strong {
+      color: var(--navy-dark);
+    }
+
+    .letter-body p {
+      margin-bottom: 16px;
+      text-align: justify;
+      color: #334155;
+    }
+
+    .letter-body ul {
+      margin: 14px 0 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .letter-body li {
+      color: #334155;
+      line-height: 1.55;
+    }
+
+    .letter-body li strong {
+      color: var(--navy-dark);
+    }
+
+    .placeholder {
+      background: #fef3c7;
+      color: #92400e;
+      padding: 1px 6px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .signature-block {
+      margin-top: 40px;
+      text-align: right;
+    }
+
+    .signature-name {
+      font-family: var(--font-title);
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--navy-dark);
+    }
+
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+      }
+
+      .toolbar {
+        display: none !important;
+      }
+
+      .letter-card {
+        box-shadow: none !important;
+        padding: 20mm !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+      }
+
+      .placeholder {
+        background: transparent !important;
+        color: inherit !important;
+        padding: 0 !important;
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="toolbar">
+    <button onclick="window.print()" class="btn-print">
+      <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+      </svg>
+      Imprimer / Enregistrer en PDF
+    </button>
+  </div>
+
+  <div class="letter-card">
+    <div class="header-block">
+      <div class="sender-info">
+        <h1>Monique CHAZALVIEL</h1>
+        <p>19150 Saint-Martial-de-Gimel</p>
+        <p>Tél. : 06 40 07 26 73</p>
+        <p>Email : chazalvielmarie@gmail.com</p>
+        <p>Permis B – Véhiculée</p>
+      </div>
+      <div class="recipient-info">
+        <p><strong>À l'attention de <span class="placeholder">[Nom du destinataire / Direction des RH]</span></strong></p>
+        <p><strong><span class="placeholder">[Nom de l'organisme ou entreprise]</span></strong></p>
+        <p><span class="placeholder">[Adresse de l'établissement]</span></p>
+        <p><span class="placeholder">[Code Postal - Ville]</span></p>
+      </div>
+    </div>
+
+    <div class="date-line">
+      À Saint-Martial-de-Gimel, le <span class="placeholder">[Date du jour]</span>
+    </div>
+
+    <div class="object-line">
+      <strong>Objet : Candidature au poste de <span class="placeholder">[Intitulé du poste, ex. : Gestionnaire administrative]</span></strong><br>
+      <small style="color: var(--text-muted);">(Réf. : <span class="placeholder">[Référence de l'annonce ou « Candidature spontanée »]</span>)</small>
+    </div>
+
+    <div class="letter-body">
+      <p>Madame, Monsieur,</p>
+
+      <p>
+        Actuellement en recherche d’une nouvelle opportunité professionnelle, je vous adresse ma candidature pour le poste de <strong><span class="placeholder">[Intitulé du poste]</span></strong> au sein de votre établissement. Forte d’une expérience de <strong>39 ans dans le domaine administratif et comptable</strong>, dont <strong>22 années au Conseil départemental de la Corrèze</strong>, je souhaite mettre ma rigueur, ma polyvalence et ma solide maîtrise des procédures réglementaires au service de vos équipes.
+      </p>
+
+      <p>
+        Au sein de la Direction Corrèze Autonomie du Conseil départemental, j’ai assuré pendant plus de deux décennies la gestion intégrale de dossiers d’aide sociale (Allocation Personnalisée d’Autonomie). Cette responsabilité m'a permis de développer une expertise reconnue dans :
+      </p>
+
+      <ul>
+        <li><strong>L’instruction et l'analyse réglementaire :</strong> vérification minutieuse des pièces justificatives, application stricte des cadres légaux et des critères d'éligibilité.</li>
+        <li><strong>La maîtrise des progiciels métiers et outils bureautiques :</strong> utilisation quotidienne et experte de logiciels spécialisés (<em>Solis</em>, <em>Genesis</em>), ordonnancement des dossiers et déclenchement des mises en paiement, ainsi que maîtrise des outils bureautiques (<em>Excel, Word, Outlook, Teams</em>).</li>
+        <li><strong>La relation humaine et partenariale :</strong> accueil téléphonique bienveillant, écoute active des usagers et des familles, coordination fluide avec les partenaires institutionnels et les prestataires médico-sociaux.</li>
+      </ul>
+
+      <p>
+        Mon parcours est également enrichi d’une solide expérience en entreprise privée, notamment en milieu pharmaceutique et industriel (secrétariat, comptabilité auxiliaire, gestion des télétransmissions et du tiers-payant). Cette double culture — service public et secteur privé — me confère une capacité d'adaptation immédiate, un grand sens de l'organisation et une parfaite autonomie face aux volumes de dossiers importants.
+      </p>
+
+      <p>
+        Intégrer votre structure serait pour moi l'opportunité de mettre à votre disposition ma conscience professionnelle, mon respect scrupuleux de la confidentialité et mon goût du travail bien fait. Disponible et véhiculée, je suis immédiatement opérationnelle.
+      </p>
+
+      <p>
+        Je serais ravie de vous rencontrer lors d’un entretien pour vous exposer plus en détail la façon dont mon profil et mon engagement peuvent répondre à vos attentes.
+      </p>
+
+      <p>
+        Dans l'attente de votre retour, je vous prie d'agréer, Madame, Monsieur, l’expression de mes salutations distinguées.
+      </p>
+    </div>
+
+    <div class="signature-block">
+      <div class="signature-name">Monique CHAZALVIEL</div>
+    </div>
+  </div>
+
+</body>
+</html>

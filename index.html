@@ -78,12 +78,17 @@
     }
 
     .navbar-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      white-space: nowrap;
       font-size: 11px;
       background: rgba(255, 255, 255, 0.15);
       color: #93c5fd;
-      padding: 2px 8px;
+      padding: 3px 10px;
       border-radius: 999px;
-      font-weight: 500;
+      font-weight: 600;
     }
 
     .navbar-buttons {
@@ -601,7 +606,7 @@
       body {
         padding: 0;
         background-color: #f8fafc;
-        font-size: 15px;
+        font-size: 16px;
         line-height: 1.6;
       }
 
@@ -611,16 +616,21 @@
 
       .navbar-title {
         font-size: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-wrap: wrap;
       }
 
       .navbar-badge {
-        font-size: 12px;
-        padding: 3px 10px;
+        font-size: 12.5px;
+        padding: 3px 11px;
+        white-space: nowrap;
       }
 
       .btn-action {
         padding: 9px 16px;
-        font-size: 13.5px;
+        font-size: 14px;
         border-radius: 8px;
       }
 
@@ -645,18 +655,18 @@
       }
 
       .name {
-        font-size: 30px;
+        font-size: 32px;
         line-height: 1.2;
       }
 
       .job-title {
-        font-size: 16px;
+        font-size: 17px;
         letter-spacing: 1.2px;
         margin-top: 6px;
       }
 
       .job-subtitle {
-        font-size: 14px;
+        font-size: 15px;
         margin-top: 6px;
         line-height: 1.5;
       }
@@ -672,21 +682,21 @@
       }
 
       .contact-item {
-        font-size: 14.5px;
+        font-size: 15.5px;
         padding: 6px 0;
         color: var(--text-dark);
       }
 
       .contact-item svg {
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
         color: var(--navy-mid);
       }
 
       .profile-banner {
-        padding: 20px 24px;
-        font-size: 15px;
-        line-height: 1.65;
+        padding: 22px 24px;
+        font-size: 16px;
+        line-height: 1.7;
         background: #eff6ff;
         border-left: 4px solid var(--blue-accent);
         border-bottom: 1px solid #dbeafe;
@@ -705,7 +715,7 @@
       }
 
       .sidebar {
-        padding: 20px 24px 44px;
+        padding: 22px 24px 44px;
         border-right: none;
         border-top: 2px solid var(--line-subtle);
         order: 2;
@@ -714,7 +724,7 @@
       }
 
       .main-heading {
-        font-size: 17px;
+        font-size: 18.5px;
         margin-bottom: 20px;
         padding-bottom: 7px;
         border-bottom-width: 2.5px;
@@ -723,12 +733,12 @@
       }
 
       .main-heading svg {
-        width: 19px;
-        height: 19px;
+        width: 20px;
+        height: 20px;
       }
 
       .experience-timeline {
-        gap: 22px;
+        gap: 24px;
       }
 
       .experience-card {
@@ -738,7 +748,7 @@
 
       .experience-card::before {
         left: -6.5px;
-        top: 4px;
+        top: 5px;
         width: 11px;
         height: 11px;
       }
@@ -750,35 +760,35 @@
       }
 
       .exp-role {
-        font-size: 16px;
+        font-size: 17px;
         line-height: 1.35;
       }
 
       .exp-duration {
-        font-size: 12.5px;
-        padding: 3px 10px;
+        font-size: 13.5px;
+        padding: 4px 11px;
         border-radius: 6px;
       }
 
       .exp-company {
-        font-size: 14px;
+        font-size: 15px;
         margin-bottom: 8px;
       }
 
       .exp-tasks {
-        gap: 6px;
+        gap: 8px;
       }
 
       .exp-tasks li {
-        font-size: 14.5px;
-        line-height: 1.6;
+        font-size: 15.5px;
+        line-height: 1.65;
         padding-left: 18px;
         color: #334155;
       }
 
       .section-title {
-        font-size: 15.5px;
-        margin-bottom: 14px;
+        font-size: 17px;
+        margin-bottom: 15px;
         padding-bottom: 6px;
         border-bottom-width: 2px;
         letter-spacing: 0.8px;
@@ -786,54 +796,55 @@
       }
 
       .section-title svg {
-        width: 18px;
-        height: 18px;
+        width: 19px;
+        height: 19px;
       }
 
       .software-label {
-        font-size: 12.5px;
-        margin-bottom: 6px;
+        font-size: 13.5px;
+        margin-bottom: 7px;
+        font-weight: 700;
       }
 
       .chips-group {
         gap: 8px;
-        margin-bottom: 10px;
+        margin-bottom: 12px;
       }
 
       .chip {
-        font-size: 13.5px;
-        padding: 6px 13px;
+        font-size: 14.5px;
+        padding: 7px 14px;
         border-radius: 8px;
       }
 
       .skills-list {
-        gap: 8px;
+        gap: 9px;
       }
 
       .skills-list li {
-        font-size: 14.5px;
-        line-height: 1.55;
-        padding-left: 16px;
+        font-size: 15.5px;
+        line-height: 1.6;
+        padding-left: 18px;
       }
 
       .skills-list li::before {
-        top: 8px;
-        width: 5.5px;
-        height: 5.5px;
+        top: 9px;
+        width: 6px;
+        height: 6px;
       }
 
       .qualities-list {
-        gap: 8px;
+        gap: 9px;
       }
 
       .qualities-list li {
-        font-size: 14.5px;
-        line-height: 1.55;
+        font-size: 15.5px;
+        line-height: 1.6;
         padding-left: 20px;
       }
 
       .qualities-list li::before {
-        font-size: 13px;
+        font-size: 14px;
       }
 
       .formation-box {
@@ -842,11 +853,11 @@
       }
 
       .formation-title {
-        font-size: 15.5px;
+        font-size: 16.5px;
       }
 
       .formation-sub {
-        font-size: 13.5px;
+        font-size: 14.5px;
         margin-top: 4px;
         line-height: 1.5;
       }
@@ -856,8 +867,8 @@
       }
 
       .interest-tag {
-        font-size: 13.5px;
-        padding: 6px 14px;
+        font-size: 14px;
+        padding: 7px 15px;
         border-radius: 20px;
       }
 
@@ -866,49 +877,33 @@
       }
     }
 
-    @media screen and (max-width: 480px) {
-      .header {
-        padding: 22px 18px 18px;
+    @media screen and (max-width: 600px) {
+      .navbar-inner {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
       }
 
-      .name {
-        font-size: 26px;
-      }
-
-      .job-title {
+      .navbar-title {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 6px;
+        width: 100%;
         font-size: 15px;
       }
 
-      .job-subtitle {
-        font-size: 13.5px;
-      }
-
-      .header-contact {
-        grid-template-columns: 1fr;
-        gap: 9px;
-      }
-
-      .contact-item {
-        font-size: 14.5px;
-      }
-
-      .profile-banner {
-        padding: 16px 18px;
-        font-size: 14.5px;
-      }
-
-      .main-content {
-        padding: 22px 18px 10px;
-      }
-
-      .sidebar {
-        padding: 16px 18px 40px;
-      }
-
-      .navbar-inner {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 10px;
+      .navbar-badge {
+        font-size: 12.5px;
+        padding: 4px 14px;
+        white-space: nowrap;
+        margin: 0 auto;
+        text-align: center;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .navbar-buttons {
@@ -920,7 +915,97 @@
         flex: 1;
         justify-content: center;
         padding: 11px 12px;
-        font-size: 13.5px;
+        font-size: 14px;
+      }
+
+      .header {
+        padding: 24px 20px 20px;
+      }
+
+      .name {
+        font-size: 28px;
+      }
+
+      .job-title {
+        font-size: 16.5px;
+      }
+
+      .job-subtitle {
+        font-size: 14.5px;
+      }
+
+      .header-contact {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .contact-item {
+        font-size: 15px;
+      }
+
+      .profile-banner {
+        padding: 18px 20px;
+        font-size: 15.5px;
+        line-height: 1.65;
+      }
+
+      .main-content {
+        padding: 24px 20px 12px;
+      }
+
+      .sidebar {
+        padding: 18px 20px 40px;
+      }
+
+      .main-heading {
+        font-size: 18px;
+      }
+
+      .exp-role {
+        font-size: 16.5px;
+      }
+
+      .exp-duration {
+        font-size: 13px;
+      }
+
+      .exp-company {
+        font-size: 14.5px;
+      }
+
+      .exp-tasks li {
+        font-size: 15px;
+        line-height: 1.62;
+      }
+
+      .section-title {
+        font-size: 16.5px;
+      }
+
+      .skills-list li,
+      .qualities-list li {
+        font-size: 15px;
+      }
+
+      .chip {
+        font-size: 14px;
+        padding: 6px 12px;
+      }
+
+      .formation-title {
+        font-size: 16px;
+      }
+
+      .formation-sub {
+        font-size: 14px;
+      }
+
+      .interest-tag {
+        font-size: 14px;
+      }
+
+      .software-label {
+        font-size: 13px;
       }
     }
 
