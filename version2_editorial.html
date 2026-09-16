@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Monique CHAZALVIEL | Version Éditoriale</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --editorial-dark: #1c1917;       /* Noir chaud pierre */
+      --editorial-burgundy: #7c2d12;   /* Brun cuivré / terre noble */
+      --editorial-accent: #9a3412;
+      --editorial-muted: #57534e;      /* Gris chaud */
+      --editorial-light: #78716c;
+      --editorial-border: #e7e5e4;
+      --editorial-bg-subtle: #fafaf9;
+      --font-serif: 'Playfair Display', serif;
+      --font-sans: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      color: var(--editorial-dark);
+      background-color: #44403c;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 24px 0 60px;
+      line-height: 1.45;
+      font-size: 11.5px;
+    }
+
+    /* Barre de navigation entre versions */
+    .action-bar {
+      position: sticky;
+      top: 16px;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(28, 25, 23, 0.94);
+      backdrop-filter: blur(10px);
+      padding: 9px 22px;
+      border-radius: 999px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+      margin-bottom: 24px;
+      color: #fff;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .nav-btn {
+      color: #d6d3d1;
+      text-decoration: none;
+      font-size: 12px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      transition: all 0.2s;
+    }
+
+    .nav-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.15);
+    }
+
+    .nav-btn.active {
+      color: #ffffff;
+      background: var(--editorial-burgundy);
+      font-weight: 700;
+    }
+
+    .action-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: #ffffff;
+      color: #1c1917;
+      border: none;
+      padding: 7px 16px;
+      font-size: 13px;
+      font-weight: 700;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: transform 0.15s, background 0.2s;
+    }
+
+    .action-btn:hover {
+      background: #f5f5f4;
+      transform: translateY(-1px);
+    }
+
+    /* FORMAT A4 STRICT */
+    .page-a4 {
+      width: 210mm;
+      height: 297mm;
+      max-height: 297mm;
+      background: #ffffff;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 26mm 22mm 22mm 24mm;
+    }
+
+    /* EN-TÊTE ÉDITORIAL */
+    .header-editorial {
+      text-align: center;
+      padding-bottom: 14px;
+      border-bottom: 1.5px solid var(--editorial-dark);
+      margin-bottom: 14px;
+    }
+
+    .candidate-name {
+      font-family: var(--font-serif);
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      color: var(--editorial-dark);
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+
+    .candidate-title {
+      font-family: var(--font-sans);
+      font-size: 13.5px;
+      font-weight: 700;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--editorial-burgundy);
+      margin-top: 5px;
+    }
+
+    .candidate-subline {
+      font-size: 11.5px;
+      color: var(--editorial-muted);
+      font-style: italic;
+      margin-top: 3px;
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 10px;
+      padding-top: 8px;
+      border-top: 1px solid var(--editorial-border);
+      font-size: 11px;
+      color: var(--editorial-muted);
+    }
+
+    .contact-row a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .contact-row strong {
+      color: var(--editorial-dark);
+      font-weight: 600;
+    }
+
+    .sep-dot {
+      color: var(--editorial-border);
+    }
+
+    /* BANDEAU PROFIL ÉDITORIAL */
+    .profile-quote {
+      font-size: 11.5px;
+      line-height: 1.55;
+      color: var(--editorial-dark);
+      background: var(--editorial-bg-subtle);
+      border-left: 3px solid var(--editorial-burgundy);
+      padding: 10px 16px;
+      margin-bottom: 16px;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .profile-quote strong {
+      color: var(--editorial-burgundy);
+      font-weight: 700;
+    }
+
+    /* CONTENEUR PRINCIPAL 2 COLONNES */
+    .grid-container {
+      display: grid;
+      grid-template-columns: 56mm 1fr;
+      gap: 22px;
+      flex: 1;
+    }
+
+    /* COLONNE GAUCHE */
+    .editorial-col-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-right: 1px solid var(--editorial-border);
+      padding-right: 18px;
+    }
+
+    .sec-title {
+      font-family: var(--font-serif);
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--editorial-dark);
+      border-bottom: 1px solid var(--editorial-dark);
+      padding-bottom: 3px;
+      margin-bottom: 9px;
+    }
+
+    /* Logiciels */
+    .soft-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .soft-list li {
+      font-size: 11px;
+      color: var(--editorial-dark);
+      line-height: 1.35;
+    }
+
+    .soft-list strong {
+      color: var(--editorial-burgundy);
+      font-weight: 700;
+    }
+
+    /* Compétences */
+    .skills-tree {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .skills-tree li {
+      font-size: 11px;
+      line-height: 1.35;
+      color: var(--editorial-muted);
+      position: relative;
+      padding-left: 12px;
+    }
+
+    .skills-tree li::before {
+      content: '▪';
+      position: absolute;
+      left: 0;
+      color: var(--editorial-burgundy);
+      font-size: 11px;
+    }
+
+    .skills-tree strong {
+      color: var(--editorial-dark);
+    }
+
+    /* Qualités */
+    .traits-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .traits-list li {
+      font-size: 11px;
+      color: var(--editorial-dark);
+      font-style: italic;
+    }
+
+    .traits-list li::before {
+      content: '— ';
+      color: var(--editorial-burgundy);
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    /* Formation */
+    .diploma-block h4 {
+      font-family: var(--font-serif);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--editorial-dark);
+    }
+
+    .diploma-block p {
+      font-size: 10.5px;
+      color: var(--editorial-muted);
+      margin-top: 2px;
+    }
+
+    /* Loisirs */
+    .interests-text {
+      font-size: 11px;
+      color: var(--editorial-muted);
+      line-height: 1.45;
+    }
+
+    /* COLONNE DROITE (EXPÉRIENCES) */
+    .editorial-col-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .timeline-editorial {
+      display: flex;
+      flex-direction: column;
+      gap: 13px;
+    }
+
+    .job-entry {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .job-entry-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .job-entry-role {
+      font-family: var(--font-serif);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--editorial-dark);
+    }
+
+    .job-entry-dates {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--editorial-burgundy);
+      letter-spacing: 0.3px;
+    }
+
+    .job-entry-org {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--editorial-muted);
+      margin-bottom: 5px;
+    }
+
+    .job-entry-org span {
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .job-entry-bullets {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 3.5px;
+    }
+
+    .job-entry-bullets li {
+      position: relative;
+      padding-left: 12px;
+      font-size: 11px;
+      line-height: 1.4;
+      color: #44403c;
+    }
+
+    .job-entry-bullets li::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--editorial-burgundy);
+      font-size: 11px;
+    }
+
+    .job-entry-bullets strong {
+      color: var(--editorial-dark);
+    }
+
+    /* IMPRESSION A4 */
+    @media print {
+      body {
+        background: transparent !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+
+      .action-bar {
+        display: none !important;
+      }
+
+      .page-a4 {
+        box-shadow: none !important;
+        margin: 0 !important;
+        width: 210mm !important;
+        height: 297mm !important;
+        max-height: 297mm !important;
+        padding: 22mm 20mm 20mm 22mm !important;
+        page-break-after: avoid !important;
+        page-break-inside: avoid !important;
+      }
+
+      @page {
+        size: A4 portrait;
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barre de sélection et d'impression -->
+  <div class="action-bar">
+    <div class="nav-links">
+      <span style="font-size: 12px; color: #a8a29e; margin-right: 4px;">Modèles :</span>
+      <a href="version1_bleu_moderne.html" class="nav-btn">1. Bleu Moderne</a>
+      <a href="version2_editorial.html" class="nav-btn active">2. Éditorial & Chic</a>
+      <a href="version3_nature_sauge.html" class="nav-btn">3. Vert Sauge Doux</a>
+      <a href="version4_minimaliste.html" class="nav-btn">4. Minimaliste Pur</a>
+    </div>
+    <button class="action-btn" onclick="window.print()">
+      <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
+      </svg>
+      Imprimer / Enregistrer en PDF
+    </button>
+  </div>
+
+  <!-- Page A4 unique -->
+  <div class="page-a4">
+
+    <!-- En-tête centré raffiné -->
+    <header class="header-editorial">
+      <h1 class="candidate-name">Monique Chazalviel</h1>
+      <div class="candidate-title">Gestionnaire Administrative</div>
+      <div class="candidate-subline">39 ans d'expérience • Spécialisée secteur public & médico-social</div>
+
+      <div class="contact-row">
+        <a href="tel:0640072673"><strong>06 40 07 26 73</strong></a>
+        <span class="sep-dot">•</span>
+        <a href="mailto:chazalvielmarie@gmail.com">chazalvielmarie@gmail.com</a>
+        <span class="sep-dot">•</span>
+        <span>19150 Saint-Martial-de-Gimel</span>
+        <span class="sep-dot">•</span>
+        <strong>Permis B – Véhiculée</strong>
+      </div>
+    </header>
+
+    <!-- Accroche / Profil -->
+    <div class="profile-quote">
+      <strong>Profil professionnel :</strong> Forte d’un parcours de <strong>39 ans en gestion administrative et comptable</strong>, dont <strong>22 ans au Conseil départemental de la Corrèze</strong>, je dispose d'une solide expertise dans l'instruction de dossiers réglementaires, le contrôle de conformité et l'utilisation de progiciels métiers. Reconnue pour ma rigueur, mon autonomie et mon sens aigu du service public.
+    </div>
+
+    <!-- Grille 2 Colonnes -->
+    <div class="grid-container">
+
+      <!-- COLONNE GAUCHE -->
+      <aside class="editorial-col-left">
+
+        <!-- Outils & Logiciels -->
+        <div>
+          <h2 class="sec-title">Logiciels & Outils</h2>
+          <ul class="soft-list">
+            <li><strong>Progiciels :</strong> Solis, Genesis</li>
+            <li><strong>Bureautique :</strong> Excel, Word</li>
+            <li><strong>Collaboratif :</strong> Teams, Outlook</li>
+            <li><strong>Gestion :</strong> Télétransmissions mutuelles</li>
+          </ul>
+        </div>
+
+        <!-- Compétences clés -->
+        <div>
+          <h2 class="sec-title">Expertise Clé</h2>
+          <ul class="skills-tree">
+            <li><strong>Instruction de dossiers</strong> d'aides (APA)</li>
+            <li><strong>Contrôle réglementaire</strong> & barèmes légaux</li>
+            <li><strong>Comptabilité auxiliaire</strong> & ordonnancement</li>
+            <li><strong>Gestion du tiers-payant</strong> (mutuelles / caisses)</li>
+            <li><strong>Accueil téléphonique</strong> bienveillant</li>
+            <li><strong>Archivage & sécurisation</strong> documentaire</li>
+          </ul>
+        </div>
+
+        <!-- Savoir-être -->
+        <div>
+          <h2 class="sec-title">Qualités</h2>
+          <ul class="traits-list">
+            <li>Rigoureuse & méthodique</li>
+            <li>Sens du service public & écoute</li>
+            <li>Organisée & consciencieuse</li>
+            <li>Autonome & esprit d'équipe</li>
+          </ul>
+        </div>
+
+        <!-- Formation -->
+        <div>
+          <h2 class="sec-title">Formation</h2>
+          <div class="diploma-block">
+            <h4>Baccalauréat A2</h4>
+            <p>Lettres et sciences humaines</p>
+          </div>
+        </div>
+
+        <!-- Centres d'intérêt -->
+        <div>
+          <h2 class="sec-title">Centres d'intérêt</h2>
+          <p class="interests-text">Randonnée pédestre • Gymnastique & Yoga • Lecture</p>
+        </div>
+
+      </aside>
+
+      <!-- COLONNE DROITE : EXPÉRIENCES -->
+      <main class="editorial-col-right">
+
+        <h2 class="sec-title">Expérience Professionnelle</h2>
+
+        <div class="timeline-editorial">
+
+          <!-- 1. Conseil départemental -->
+          <article class="job-entry">
+            <div class="job-entry-header">
+              <h3 class="job-entry-role">Gestionnaire de dossiers APA à domicile</h3>
+              <span class="job-entry-dates">2004 – 2026 (22 ans)</span>
+            </div>
+            <div class="job-entry-org">
+              Conseil départemental de la Corrèze <span>— Direction Corrèze Autonomie</span>
+            </div>
+            <ul class="job-entry-bullets">
+              <li><strong>Instruction & conformité :</strong> Réception, analyse et instruction complète des demandes d'Allocation Personnalisée d'Autonomie (APA) dans le respect rigoureux des dispositions réglementaires.</li>
+              <li><strong>Contrôle de conformité :</strong> Vérification des pièces justificatives, calcul des plans d'aide et application des barèmes légaux.</li>
+              <li><strong>Gestion informatique & ordonnancement :</strong> Saisie administrative et déclenchement des mises en paiement sur progiciels métiers (<strong>Solis</strong>, <strong>Genesis</strong>).</li>
+              <li><strong>Relation usagers & partenaires :</strong> Accueil téléphonique bienveillant, écoute active, conseil aux familles et coordination avec les équipes médico-sociales.</li>
+              <li><strong>Autonomie :</strong> Suivi méthodique des échéances et gestion rigoureuse d'un important volume de dossiers.</li>
+            </ul>
+          </article>
+
+          <!-- 2. Pharmacie Mazeaud -->
+          <article class="job-entry">
+            <div class="job-entry-header">
+              <h3 class="job-entry-role">Secrétaire administrative et comptable</h3>
+              <span class="job-entry-dates">1997 – 2004 (7 ans)</span>
+            </div>
+            <div class="job-entry-org">
+              Pharmacie Mazeaud <span>— Égletons (19)</span>
+            </div>
+            <ul class="job-entry-bullets">
+              <li><strong>Tiers-payant & télétransmissions :</strong> Gestion quotidienne des télétransmissions et suivi rigoureux des règlements auprès des organismes de sécurité sociale et mutuelles.</li>
+              <li><strong>Comptabilité auxiliaire :</strong> Suivi des encaissements, conciliation des bordereaux, facturation et traitement des rejets.</li>
+              <li><strong>Gestion logistique :</strong> Réception, contrôle qualitatif et quantitatif des commandes de médicaments.</li>
+            </ul>
+          </article>
+
+          <!-- 3. Entreprises Gironde -->
+          <article class="job-entry">
+            <div class="job-entry-header">
+              <h3 class="job-entry-role">Secrétaire comptable et administrative</h3>
+              <span class="job-entry-dates">1995 – 1996</span>
+            </div>
+            <div class="job-entry-org">
+              Entreprises Auxisol | Sabla | Unibéton <span>— Gironde (33)</span>
+            </div>
+            <ul class="job-entry-bullets">
+              <li>Accueil physique et téléphonique, standard, rédaction de correspondances, classement et archivage.</li>
+              <li>Suivi comptable courant : facturation, gestion des traites et relance des encaissements.</li>
+            </ul>
+          </article>
+
+          <!-- 4. Premières expériences unifiées -->
+          <article class="job-entry">
+            <div class="job-entry-header">
+              <h3 class="job-entry-role">Secrétaire administrative et comptable</h3>
+              <span class="job-entry-dates">1987 – 1995</span>
+            </div>
+            <div class="job-entry-org">
+              France Télécom <span>(Bordeaux/Pessac)</span> • Office Public HLM <span>(Limoges)</span> • Scierie Boissac • Carif
+            </div>
+            <ul class="job-entry-bullets">
+              <li>Missions polyvalentes de secrétariat, accueil du public, tenue de dossiers et comptabilité générale.</li>
+            </ul>
+          </article>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </div>
+
+</body>
+</html>
