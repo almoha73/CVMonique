@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV - Monique CHAZALVIEL | Gestionnaire Administrative</title>
+  <title>Monique CHAZALVIEL - Gestionnaire Administrative | CV</title>
+  <meta name="description" content="CV de Monique Chazalviel - Gestionnaire administrative avec 39 ans d'expérience, dont 22 ans au Conseil départemental de la Corrèze. Spécialisée médico-social et gestion de dossiers APA.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -33,99 +34,122 @@
     body {
       font-family: var(--font-body);
       color: var(--text-dark);
-      background-color: #475569;
+      background-color: #f1f5f9;
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding: 24px 0 60px;
-      line-height: 1.45;
-      font-size: 11.5px;
-    }
-
-    /* Action bar */
-    .action-bar {
-      position: sticky;
-      top: 16px;
-      z-index: 100;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      background: rgba(15, 23, 42, 0.94);
-      backdrop-filter: blur(10px);
-      padding: 9px 22px;
-      border-radius: 999px;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
-      margin-bottom: 24px;
-      color: #fff;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 8px;
-      align-items: center;
-    }
-
-    .nav-btn {
-      color: #94a3b8;
-      text-decoration: none;
+      min-height: 100vh;
+      line-height: 1.5;
       font-size: 12px;
-      padding: 5px 12px;
-      border-radius: 999px;
-      transition: all 0.2s;
+      -webkit-font-smoothing: antialiased;
     }
 
-    .nav-btn:hover {
+    /* BARRE D'ACTIONS WEB (Téléphone, Tablette & Ordinateur) */
+    .web-navbar {
+      width: 100%;
+      background: #0f2b48;
       color: #ffffff;
-      background: rgba(255, 255, 255, 0.15);
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     }
 
-    .nav-btn.active {
-      color: #ffffff;
-      background: #2563eb;
+    .navbar-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .navbar-title {
+      font-family: var(--font-title);
+      font-size: 14px;
       font-weight: 700;
+      letter-spacing: 0.5px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .action-btn {
+    .navbar-badge {
+      font-size: 11px;
+      background: rgba(255, 255, 255, 0.15);
+      color: #93c5fd;
+      padding: 2px 8px;
+      border-radius: 999px;
+      font-weight: 500;
+    }
+
+    .navbar-buttons {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-action {
       display: inline-flex;
       align-items: center;
-      gap: 7px;
-      background: #ffffff;
-      color: #0f172a;
-      border: none;
-      padding: 7px 16px;
-      font-size: 13px;
+      gap: 6px;
+      padding: 7px 14px;
+      font-size: 12px;
       font-weight: 700;
-      border-radius: 999px;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.2s;
       cursor: pointer;
+      border: none;
       font-family: var(--font-body);
-      transition: all 0.2s ease;
     }
 
-    .action-btn:hover {
-      background: #f1f5f9;
-      transform: translateY(-1px);
+    .btn-download {
+      background: #2563eb;
+      color: #ffffff;
     }
 
-    .action-info {
-      font-size: 12.5px;
-      color: #cbd5e1;
+    .btn-download:hover {
+      background: #1d4ed8;
     }
 
-    /* Page A4 stricte */
-    .page-a4 {
-      width: 210mm;
-      height: 297mm;
-      max-height: 297mm;
+    .btn-print {
       background: #ffffff;
-      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+      color: #0f2b48;
+    }
+
+    .btn-print:hover {
+      background: #f8fafc;
+    }
+
+    /* CONTENEUR PRINCIPAL DU CV */
+    .cv-wrapper {
+      padding: 30px 15px 60px;
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    /* FORMAT A4 (Défaut écran large) */
+    .cv-card {
+      width: 210mm;
+      min-height: 297mm;
+      height: 297mm;
+      background: #ffffff;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
       display: flex;
       flex-direction: column;
+      position: relative;
+      border-radius: 4px;
       overflow: hidden;
     }
 
-    /* EN-TÊTE ÉPURÉ */
+    /* EN-TÊTE */
     .header {
-      padding: 30px 38px 20px;
+      padding: 28px 38px 18px;
       border-bottom: 1.5px solid var(--line-subtle);
       display: flex;
       justify-content: space-between;
@@ -184,11 +208,16 @@
       font-size: 11.5px;
       color: var(--text-muted);
       text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .contact-item:hover {
+      color: var(--blue-accent);
     }
 
     .contact-item svg {
-      width: 13px;
-      height: 13px;
+      width: 14px;
+      height: 14px;
       color: var(--navy-mid);
       flex-shrink: 0;
     }
@@ -213,7 +242,7 @@
       font-weight: 700;
     }
 
-    /* CORPS DU CV : 2 COLONNES */
+    /* CORPS 2 COLONNES (Mode A4) */
     .cv-container {
       display: grid;
       grid-template-columns: 68mm 1fr;
@@ -229,6 +258,11 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+    }
+
+    .sidebar-section {
+      display: flex;
+      flex-direction: column;
     }
 
     .section-title {
@@ -250,6 +284,7 @@
       width: 13px;
       height: 13px;
       color: var(--blue-accent);
+      flex-shrink: 0;
     }
 
     /* Logiciels & Outils */
@@ -413,6 +448,7 @@
       width: 15px;
       height: 15px;
       color: var(--navy-mid);
+      flex-shrink: 0;
     }
 
     /* TIMELINE DES EXPÉRIENCES */
@@ -512,7 +548,175 @@
       color: var(--navy-dark);
     }
 
-    /* IMPRESSION A4 STRICTE */
+    /* ===================================================
+       RESPONSIVE DESIGN (TABLETTE & MOBILE)
+       =================================================== */
+    @media screen and (max-width: 900px) {
+      body {
+        padding: 0;
+        background-color: #ffffff;
+        font-size: 13px;
+      }
+
+      .cv-wrapper {
+        padding: 0;
+      }
+
+      .cv-card {
+        width: 100%;
+        max-width: 100%;
+        min-height: auto;
+        height: auto;
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 24px 20px 18px;
+        gap: 16px;
+      }
+
+      .header-contact {
+        align-items: flex-start;
+        width: 100%;
+        padding-top: 10px;
+        border-top: 1px solid var(--line-subtle);
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+      }
+
+      .contact-item {
+        font-size: 12.5px;
+        padding: 4px 0;
+      }
+
+      .contact-item svg {
+        width: 16px;
+        height: 16px;
+      }
+
+      .profile-banner {
+        padding: 16px 20px;
+        font-size: 13px;
+        line-height: 1.6;
+      }
+
+      /* Passage en 1 seule colonne responsive pour mobile / tablette */
+      .cv-container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+      }
+
+      .main-content {
+        padding: 24px 20px;
+        order: 1; /* Les expériences viennent en premier pour le recruteur */
+      }
+
+      .sidebar {
+        padding: 24px 20px 40px;
+        border-right: none;
+        border-top: 2px solid var(--line-subtle);
+        order: 2;
+        gap: 22px;
+      }
+
+      .main-heading {
+        font-size: 15px;
+        margin-bottom: 16px;
+      }
+
+      .exp-title-row {
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .exp-role {
+        font-size: 14.5px;
+      }
+
+      .exp-duration {
+        font-size: 11.5px;
+      }
+
+      .exp-company {
+        font-size: 13px;
+      }
+
+      .exp-tasks li {
+        font-size: 12.5px;
+        line-height: 1.5;
+        gap: 5px;
+      }
+
+      .section-title {
+        font-size: 13px;
+        margin-bottom: 12px;
+      }
+
+      .skills-list li {
+        font-size: 12.5px;
+        line-height: 1.5;
+      }
+
+      .qualities-list li {
+        font-size: 12.5px;
+      }
+
+      .chip {
+        font-size: 12px;
+        padding: 5px 10px;
+      }
+
+      .formation-title {
+        font-size: 13px;
+      }
+
+      .formation-sub {
+        font-size: 12px;
+      }
+
+      .interest-tag {
+        font-size: 12px;
+        padding: 4px 12px;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      .name {
+        font-size: 26px;
+      }
+
+      .job-title {
+        font-size: 13.5px;
+      }
+
+      .header-contact {
+        grid-template-columns: 1fr;
+      }
+
+      .navbar-inner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .navbar-buttons {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .btn-action {
+        flex: 1;
+        justify-content: center;
+      }
+    }
+
+    /* ===================================================
+       IMPRESSION A4 STRICTE (1 PAGE GARANTIE)
+       =================================================== */
     @media print {
       body {
         background: transparent !important;
@@ -520,18 +724,70 @@
         margin: 0 !important;
       }
 
-      .action-bar {
+      .web-navbar {
         display: none !important;
       }
 
-      .page-a4 {
+      .cv-wrapper {
+        padding: 0 !important;
+        margin: 0 !important;
+        display: block !important;
+      }
+
+      .cv-card {
         box-shadow: none !important;
         margin: 0 !important;
         width: 210mm !important;
         height: 297mm !important;
         max-height: 297mm !important;
+        border-radius: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        overflow: hidden !important;
         page-break-after: avoid !important;
         page-break-inside: avoid !important;
+      }
+
+      .header {
+        display: flex !important;
+        flex-direction: row !important;
+        padding: 28px 38px 18px !important;
+      }
+
+      .header-contact {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-end !important;
+        border-top: none !important;
+        padding-top: 4px !important;
+        width: auto !important;
+      }
+
+      .cv-container {
+        display: grid !important;
+        grid-template-columns: 68mm 1fr !important;
+        height: calc(297mm - 146px) !important;
+      }
+
+      .sidebar {
+        order: 0 !important;
+        border-right: 1px solid var(--line-subtle) !important;
+        border-top: none !important;
+        padding: 20px 22px 20px 38px !important;
+      }
+
+      .main-content {
+        order: 0 !important;
+        padding: 20px 38px 20px 28px !important;
+      }
+
+      .exp-role {
+        font-size: 13px !important;
+      }
+
+      .exp-tasks li {
+        font-size: 11px !important;
+        line-height: 1.38 !important;
       }
 
       @page {
@@ -543,251 +799,260 @@
 </head>
 <body>
 
-  <!-- Barre d'action supérieure pour navigateur -->
-  <div class="action-bar">
-    <div class="nav-links">
-      <span style="font-size: 12px; color: #94a3b8; margin-right: 4px;">Modèles :</span>
-      <a href="version1_bleu_moderne.html" class="nav-btn active">1. Bleu Moderne</a>
-      <a href="version2_editorial.html" class="nav-btn">2. Éditorial & Chic</a>
-      <a href="version3_nature_sauge.html" class="nav-btn">3. Vert Sauge Doux</a>
-      <a href="version4_minimaliste.html" class="nav-btn">4. Minimaliste Pur</a>
-    </div>
-    <button class="action-btn" onclick="window.print()">
-      <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
-      </svg>
-      Imprimer / Enregistrer en PDF
-    </button>
-  </div>
-
-  <!-- Format A4 -->
-  <div class="page-a4">
-
-    <!-- En-tête -->
-    <header class="header">
-      <div class="header-left">
-        <h1 class="name">Monique <span>CHAZALVIEL</span></h1>
-        <div class="job-title">Gestionnaire Administrative</div>
-        <div class="job-subtitle">39 ans d'expérience • Spécialisée secteur public & médico-social</div>
+  <!-- Barre de navigation web responsive (masquée lors de l'impression) -->
+  <header class="web-navbar">
+    <div class="navbar-inner">
+      <div class="navbar-title">
+        <span>CV Professionnel • Monique Chazalviel</span>
+        <span class="navbar-badge">Gestionnaire Administrative</span>
       </div>
-
-      <div class="header-contact">
-        <a class="contact-item" href="tel:0640072673">
-          <svg fill="currentColor" viewBox="0 0 20 20">
-            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
+      <div class="navbar-buttons">
+        <a href="CV_Monique_Chazalviel.pdf" download class="btn-action btn-download">
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
           </svg>
-          <strong>06 40 07 26 73</strong>
+          Télécharger le PDF
         </a>
-        <a class="contact-item" href="mailto:chazalvielmarie@gmail.com">
-          <svg fill="currentColor" viewBox="0 0 20 20">
-            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+        <button onclick="window.print()" class="btn-action btn-print">
+          <svg width="15" height="15" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"/>
           </svg>
-          <span>chazalvielmarie@gmail.com</span>
-        </a>
-        <div class="contact-item">
-          <svg fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
-          </svg>
-          <span>19150 Saint-Martial-de-Gimel</span>
-        </div>
-        <div class="contact-item">
-          <svg fill="currentColor" viewBox="0 0 20 20">
-            <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
-            <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"/>
-          </svg>
-          <strong>Permis B – Véhiculée</strong>
-        </div>
+          Imprimer
+        </button>
       </div>
-    </header>
-
-    <!-- Accroche / Profil -->
-    <div class="profile-banner">
-      <strong>Profil :</strong> Forte d’un parcours de <strong>39 ans en gestion administrative et comptable</strong>, dont <strong>22 ans au Conseil départemental de la Corrèze</strong>, je dispose d'une solide expertise dans l'instruction de dossiers réglementaires, le contrôle de conformité et l'utilisation de progiciels métiers. Reconnue pour ma rigueur, mon autonomie et mon sens du service public.
     </div>
+  </header>
 
-    <!-- 2 Colonnes -->
-    <div class="cv-container">
+  <!-- Conteneur global -->
+  <div class="cv-wrapper">
+    <main class="cv-card" id="cv-document">
 
-      <!-- COLONNE GAUCHE -->
-      <aside class="sidebar">
+      <!-- En-tête -->
+      <header class="header">
+        <div class="header-left">
+          <h1 class="name">Monique <span>CHAZALVIEL</span></h1>
+          <div class="job-title">Gestionnaire Administrative</div>
+          <div class="job-subtitle">39 ans d'expérience • Spécialisée secteur public & médico-social</div>
+        </div>
 
-        <!-- Outils & Logiciels -->
-        <div class="sidebar-section">
-          <h2 class="section-title">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+        <div class="header-contact">
+          <a class="contact-item" href="tel:0640072673">
+            <svg fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 4V3z"/>
             </svg>
-            Outils & Logiciels
-          </h2>
-          <div class="software-block">
-            <div class="software-subgroup">
-              <span class="software-label">Progiciels Métiers</span>
-              <div class="chips-group">
-                <span class="chip chip-primary">Solis</span>
-                <span class="chip chip-primary">Genesis</span>
-                <span class="chip">Télétransmissions</span>
+            <strong>06 40 07 26 73</strong>
+          </a>
+          <a class="contact-item" href="mailto:chazalvielmarie@gmail.com">
+            <svg fill="currentColor" viewBox="0 0 20 20">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+            <span>chazalvielmarie@gmail.com</span>
+          </a>
+          <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+            </svg>
+            <span>19150 Saint-Martial-de-Gimel</span>
+          </div>
+          <div class="contact-item">
+            <svg fill="currentColor" viewBox="0 0 20 20">
+              <path d="M8 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM15 16.5a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/>
+              <path d="M3 4a1 1 0 00-1 1v10a1 1 0 001 1h1.05a2.5 2.5 0 014.9 0H10a1 1 0 001-1V5a1 1 0 00-1-1H3zM14 7a1 1 0 00-1 1v6.05A2.5 2.5 0 0115.95 16H17a1 1 0 001-1v-5a1 1 0 00-.293-.707l-2-2A1 1 0 0015 7h-1z"/>
+            </svg>
+            <strong>Permis B – Véhiculée</strong>
+          </div>
+        </div>
+      </header>
+
+      <!-- Bandeau Accroche -->
+      <section class="profile-banner">
+        <strong>Profil professionnel :</strong> Forte d’un parcours de <strong>39 ans en gestion administrative et comptable</strong>, dont <strong>22 ans au Conseil départemental de la Corrèze</strong>, je dispose d'une solide expertise dans l'instruction de dossiers réglementaires, le contrôle de conformité et l'utilisation de progiciels métiers. Reconnue pour ma rigueur, mon autonomie et mon sens du service public.
+      </section>
+
+      <!-- Contenu principal -->
+      <div class="cv-container">
+
+        <!-- COLONNE GAUCHE (SIDEBAR) -->
+        <aside class="sidebar">
+
+          <!-- Outils & Logiciels -->
+          <div class="sidebar-section">
+            <h2 class="section-title">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              Outils & Logiciels
+            </h2>
+            <div class="software-block">
+              <div class="software-subgroup">
+                <span class="software-label">Progiciels Métiers</span>
+                <div class="chips-group">
+                  <span class="chip chip-primary">Solis</span>
+                  <span class="chip chip-primary">Genesis</span>
+                  <span class="chip">Télétransmissions</span>
+                </div>
+              </div>
+              <div class="software-subgroup">
+                <span class="software-label">Bureautique & Collaboratif</span>
+                <div class="chips-group">
+                  <span class="chip chip-primary">Excel</span>
+                  <span class="chip chip-primary">Word</span>
+                  <span class="chip chip-primary">Teams</span>
+                  <span class="chip">Outlook</span>
+                </div>
               </div>
             </div>
-            <div class="software-subgroup">
-              <span class="software-label">Bureautique & Collaboratif</span>
-              <div class="chips-group">
-                <span class="chip chip-primary">Excel</span>
-                <span class="chip chip-primary">Word</span>
-                <span class="chip chip-primary">Teams</span>
-                <span class="chip">Outlook</span>
-              </div>
+          </div>
+
+          <!-- Compétences clés -->
+          <div class="sidebar-section">
+            <h2 class="section-title">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Compétences Clés
+            </h2>
+            <ul class="skills-list">
+              <li><strong>Instruction de dossiers</strong> d'aides (APA)</li>
+              <li><strong>Contrôle réglementaire</strong> et conformité</li>
+              <li><strong>Comptabilité auxiliaire</strong> & règlements</li>
+              <li><strong>Gestion du tiers-payant</strong> (mutuelles)</li>
+              <li><strong>Accueil téléphonique</strong> & orientation</li>
+              <li><strong>Archivage & sécurisation</strong> des pièces</li>
+            </ul>
+          </div>
+
+          <!-- Savoir-être -->
+          <div class="sidebar-section">
+            <h2 class="section-title">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+              </svg>
+              Qualités
+            </h2>
+            <ul class="qualities-list">
+              <li>Rigoureuse & méthodique</li>
+              <li>Sens du service public & écoute</li>
+              <li>Organisée & consciencieuse</li>
+              <li>Autonomie & esprit d'équipe</li>
+            </ul>
+          </div>
+
+          <!-- Formation -->
+          <div class="sidebar-section">
+            <h2 class="section-title">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
+              </svg>
+              Formation
+            </h2>
+            <div class="formation-box">
+              <div class="formation-title">Baccalauréat A2</div>
+              <div class="formation-sub">Lettres et sciences humaines</div>
             </div>
           </div>
-        </div>
 
-        <!-- Compétences clés -->
-        <div class="sidebar-section">
-          <h2 class="section-title">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
-            </svg>
-            Compétences Clés
-          </h2>
-          <ul class="skills-list">
-            <li><strong>Instruction de dossiers</strong> d'aides (APA)</li>
-            <li><strong>Contrôle réglementaire</strong> et conformité</li>
-            <li><strong>Comptabilité auxiliaire</strong> & règlements</li>
-            <li><strong>Gestion du tiers-payant</strong> (mutuelles)</li>
-            <li><strong>Accueil téléphonique</strong> & orientation</li>
-            <li><strong>Archivage & sécurisation</strong> des pièces</li>
-          </ul>
-        </div>
-
-        <!-- Savoir-être -->
-        <div class="sidebar-section">
-          <h2 class="section-title">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-            </svg>
-            Qualités
-          </h2>
-          <ul class="qualities-list">
-            <li>Rigoureuse & méthodique</li>
-            <li>Sens du service public & écoute</li>
-            <li>Organisée & consciencieuse</li>
-            <li>Autonomie & esprit d'équipe</li>
-          </ul>
-        </div>
-
-        <!-- Formation -->
-        <div class="sidebar-section">
-          <h2 class="section-title">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/>
-            </svg>
-            Formation
-          </h2>
-          <div class="formation-box">
-            <div class="formation-title">Baccalauréat A2</div>
-            <div class="formation-sub">Lettres et sciences humaines</div>
+          <!-- Centres d'intérêt -->
+          <div class="sidebar-section">
+            <h2 class="section-title">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+              </svg>
+              Centres d'intérêt
+            </h2>
+            <div class="interests-tags">
+              <span class="interest-tag">Randonnée pédestre</span>
+              <span class="interest-tag">Gymnastique & Yoga</span>
+              <span class="interest-tag">Lecture</span>
+            </div>
           </div>
-        </div>
 
-        <!-- Centres d'intérêt -->
-        <div class="sidebar-section">
-          <h2 class="section-title">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-            </svg>
-            Centres d'intérêt
-          </h2>
-          <div class="interests-tags">
-            <span class="interest-tag">Randonnée pédestre</span>
-            <span class="interest-tag">Gymnastique & Yoga</span>
-            <span class="interest-tag">Lecture</span>
+        </aside>
+
+        <!-- COLONNE DROITE (EXPÉRIENCES PROFESSIONNELLES) -->
+        <main class="main-content">
+
+          <div>
+            <h2 class="main-heading">
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+              </svg>
+              Expérience Professionnelle
+            </h2>
+
+            <div class="experience-timeline">
+
+              <!-- 1. Conseil départemental -->
+              <article class="experience-card is-current">
+                <div class="exp-title-row">
+                  <h3 class="exp-role">Gestionnaire de dossiers APA à domicile</h3>
+                  <span class="exp-duration">2004 – 2026 (22 ans)</span>
+                </div>
+                <div class="exp-company">
+                  Conseil départemental de la Corrèze <span>• Direction Corrèze Autonomie</span>
+                </div>
+                <ul class="exp-tasks">
+                  <li><strong>Instruction & analyse :</strong> Réception, analyse et instruction complète des demandes d'Allocation Personnalisée d'Autonomie (APA) dans le respect strict des réglementations départementales.</li>
+                  <li><strong>Contrôle de conformité :</strong> Vérification minutieuse des pièces justificatives et application rigoureuse des barèmes et réglementations.</li>
+                  <li><strong>Gestion logicielle & ordonnancement :</strong> Saisie des dossiers et déclenchement des mises en paiement sur les progiciels métiers dédiés (<strong>Solis</strong>, <strong>Genesis</strong>).</li>
+                  <li><strong>Relation usagers & partenaires :</strong> Accueil téléphonique bienveillant, écoute active, conseil aux bénéficiaires/familles et échanges avec les partenaires et prestataires divers.</li>
+                  <li><strong>Volume & gestion de portefeuille :</strong> Suivi actif d'un portefeuille d'environ <strong>800 dossiers APA à domicile</strong> et d'une <strong>vingtaine de dossiers d'aide sociale (aide ménagère)</strong>.</li>
+                </ul>
+              </article>
+
+              <!-- 2. Pharmacie Mazeaud -->
+              <article class="experience-card">
+                <div class="exp-title-row">
+                  <h3 class="exp-role">Secrétaire administrative et comptable</h3>
+                  <span class="exp-duration">1997 – 2004 (7 ans)</span>
+                </div>
+                <div class="exp-company">
+                  Pharmacie Mazeaud <span>• Égletons (19)</span>
+                </div>
+                <ul class="exp-tasks">
+                  <li><strong>Tiers-payant & télétransmissions :</strong> Gestion quotidienne des télétransmissions et suivi rigoureux des règlements auprès des organismes de sécurité sociale et mutuelles.</li>
+                  <li><strong>Comptabilité auxiliaire :</strong> Suivi des encaissements, conciliation des bordereaux, facturation et traitement des rejets.</li>
+                  <li><strong>Gestion administrative des stocks :</strong> Réception, contrôle de conformité des commandes et mise en place des produits.</li>
+                </ul>
+              </article>
+
+              <!-- 3. Entreprises Gironde -->
+              <article class="experience-card">
+                <div class="exp-title-row">
+                  <h3 class="exp-role">Secrétaire comptable et administrative</h3>
+                  <span class="exp-duration">1995 – 1996</span>
+                </div>
+                <div class="exp-company">
+                  Entreprises Auxisol | Sabla | Unibéton <span>• Gironde (33)</span>
+                </div>
+                <ul class="exp-tasks">
+                  <li>Accueil téléphonique, standard, rédaction de correspondances, classement et archivage.</li>
+                  <li>Suivi de la comptabilité courante : facturation, gestion des traites et relance des encaissements.</li>
+                </ul>
+              </article>
+
+              <!-- 4. Expériences formatrices intégrées dans la timeline -->
+              <article class="experience-card">
+                <div class="exp-title-row">
+                  <h3 class="exp-role">Secrétaire administrative et comptable</h3>
+                  <span class="exp-duration">1987 – 1995</span>
+                </div>
+                <div class="exp-company">
+                  France Télécom <span>(Bordeaux/Pessac)</span> • Office Public HLM <span>(Limoges)</span> • Scierie Boissac <span>(Égletons)</span> • Carif Limousin
+                </div>
+                <ul class="exp-tasks">
+                  <li>Missions polyvalentes de secrétariat, accueil du public, saisie administrative, tenue de dossiers et comptabilité courante.</li>
+                </ul>
+              </article>
+
+            </div>
           </div>
-        </div>
 
-      </aside>
+        </main>
 
-      <!-- COLONNE DROITE -->
-      <main class="main-content">
-
-        <div>
-          <h2 class="main-heading">
-            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-            </svg>
-            Expérience Professionnelle
-          </h2>
-
-          <div class="experience-timeline">
-
-            <!-- 1. Conseil départemental -->
-            <article class="experience-card is-current">
-              <div class="exp-title-row">
-                <h3 class="exp-role">Gestionnaire de dossiers APA à domicile</h3>
-                <span class="exp-duration">2004 – 2026 (22 ans)</span>
-              </div>
-              <div class="exp-company">
-                Conseil départemental de la Corrèze <span>• Direction Corrèze Autonomie</span>
-              </div>
-              <ul class="exp-tasks">
-                <li><strong>Instruction & analyse :</strong> Réception, analyse et instruction complète des demandes d'Allocation Personnalisée d'Autonomie (APA) dans le respect strict des réglementations départementales.</li>
-                <li><strong>Contrôle de conformité :</strong> Vérification minutieuse des pièces justificatives et application rigoureuse des barèmes et réglementations.</li>
-                <li><strong>Gestion logicielle & ordonnancement :</strong> Saisie des dossiers et déclenchement des mises en paiement sur les progiciels métiers dédiés (<strong>Solis</strong>, <strong>Genesis</strong>).</li>
-                <li><strong>Relation usagers & partenaires :</strong> Accueil téléphonique bienveillant, écoute active, conseil aux bénéficiaires/familles et échanges avec les partenaires et prestataires divers.</li>
-                <li><strong>Volume & gestion de portefeuille :</strong> Suivi actif d'un portefeuille d'environ <strong>800 dossiers APA à domicile</strong> et d'une <strong>vingtaine de dossiers d'aide sociale (aide ménagère)</strong>.</li>
-              </ul>
-            </article>
-
-            <!-- 2. Pharmacie Mazeaud -->
-            <article class="experience-card">
-              <div class="exp-title-row">
-                <h3 class="exp-role">Secrétaire administrative et comptable</h3>
-                <span class="exp-duration">1997 – 2004 (7 ans)</span>
-              </div>
-              <div class="exp-company">
-                Pharmacie Mazeaud <span>• Égletons (19)</span>
-              </div>
-              <ul class="exp-tasks">
-                <li><strong>Tiers-payant & télétransmissions :</strong> Gestion quotidienne des télétransmissions et suivi rigoureux des règlements auprès des organismes de sécurité sociale et mutuelles.</li>
-                <li><strong>Comptabilité auxiliaire :</strong> Suivi des encaissements, conciliation des bordereaux, facturation et traitement des rejets.</li>
-                <li><strong>Gestion administrative des stocks :</strong> Réception, contrôle de conformité des commandes et mise en place des produits.</li>
-              </ul>
-            </article>
-
-            <!-- 3. Entreprises Gironde -->
-            <article class="experience-card">
-              <div class="exp-title-row">
-                <h3 class="exp-role">Secrétaire comptable et administrative</h3>
-                <span class="exp-duration">1995 – 1996</span>
-              </div>
-              <div class="exp-company">
-                Entreprises Auxisol | Sabla | Unibéton <span>• Gironde (33)</span>
-              </div>
-              <ul class="exp-tasks">
-                <li>Accueil téléphonique, standard, rédaction de correspondances, classement et archivage.</li>
-                <li>Suivi de la comptabilité courante : facturation, gestion des traites et relance des encaissements.</li>
-              </ul>
-            </article>
-
-            <!-- 4. Expériences formatrices intégrées dans la timeline -->
-            <article class="experience-card">
-              <div class="exp-title-row">
-                <h3 class="exp-role">Secrétaire administrative et comptable</h3>
-                <span class="exp-duration">1987 – 1995</span>
-              </div>
-              <div class="exp-company">
-                France Télécom <span>(Bordeaux/Pessac)</span> • Office Public HLM <span>(Limoges)</span> • Scierie Boissac <span>(Égletons)</span> • Carif Limousin
-              </div>
-              <ul class="exp-tasks">
-                <li>Missions polyvalentes de secrétariat, accueil du public, saisie administrative, tenue de dossiers et comptabilité courante.</li>
-              </ul>
-            </article>
-
-          </div>
-        </div>
-
-      </main>
-
-    </div>
+      </div>
+    </main>
   </div>
 
 </body>
